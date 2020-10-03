@@ -58,17 +58,140 @@
                 </div>
             </div>
         </header>
-        <section class="mdui-col-md-9">
-           
-        </section>
+        <main class="mdui-col-md-9 mdui-text-color-theme">
+            <div class="post-box">
+                <div class="post-info">
+                    <span>很好！目前共计xx篇文章。继续努力！</span>
+                </div>
+                <div class="post-year">
+                    <span>2020</span>
+                </div>
+                <div class="post-item">
+                    <span>10-03</span>
+                    <a href="#" class="mdui-btn mdui-ripple">Hello World!</a>
+                </div>
+                <div class="post-item">
+                    <span>10-04</span>
+                    <a href="#" class="mdui-btn mdui-ripple">几个“关于”</a>
+                </div>
+                <div class="post-item">
+                    <span>10-01</span>
+                    <a href="#" class="mdui-btn mdui-ripple">双节快乐</a>
+                </div>
+                <div class="post-item">
+                    <span>09-31</span>
+                    <a href="#" class="mdui-btn mdui-ripple">MDUI笔记<2></a>
+                </div>
+                <div class="post-item">
+                    <span>09-27</span>
+                    <a href="#" class="mdui-btn mdui-ripple">MDUI笔记<1></a>
+                </div>
+                <div class="post-year">
+                    <span>2019</span>
+                </div>
+                <div class="post-item">
+                    <span>10-03</span>
+                    <a href="#" class="mdui-btn mdui-ripple">Hello World!</a>
+                </div>
+                <div class="post-item">
+                    <span>10-04</span>
+                    <a href="#" class="mdui-btn mdui-ripple">几个“关于”</a>
+                </div>
+                <div class="post-item">
+                    <span>10-01</span>
+                    <a href="#" class="mdui-btn mdui-ripple">双节快乐</a>
+                </div>
+                <div class="post-item">
+                    <span>09-31</span>
+                    <a href="#" class="mdui-btn mdui-ripple">MDUI笔记<2></a>
+                </div>
+                <div class="post-item">
+                    <span>09-27</span>
+                    <a href="#" class="mdui-btn mdui-ripple">MDUI笔记<1></a>
+                </div>
+                <div class="post-year">
+                    <span>2019</span>
+                </div>
+                <div class="post-item">
+                    <span>10-03</span>
+                    <a href="#" class="mdui-btn mdui-ripple">Hello World!</a>
+                </div>
+                <div class="post-item">
+                    <span>10-04</span>
+                    <a href="#" class="mdui-btn mdui-ripple">几个“关于”</a>
+                </div>
+                <div class="post-item">
+                    <span>10-01</span>
+                    <a href="#" class="mdui-btn mdui-ripple">双节快乐</a>
+                </div>
+                <div class="post-item">
+                    <span>09-31</span>
+                    <a href="#" class="mdui-btn mdui-ripple">MDUI笔记<2></a>
+                </div>
+                <div class="post-item">
+                    <span>09-27</span>
+                    <a href="#" class="mdui-btn mdui-ripple">MDUI笔记<1></a>
+                </div>
+                <div class="post-year">
+                    <span>2019</span>
+                </div>
+                <div class="post-item">
+                    <span>10-03</span>
+                    <a href="#" class="mdui-btn mdui-ripple">Hello World!</a>
+                </div>
+                <div class="post-item">
+                    <span>10-04</span>
+                    <a href="#" class="mdui-btn mdui-ripple">几个“关于”</a>
+                </div>
+                <div class="post-item">
+                    <span>10-01</span>
+                    <a href="#" class="mdui-btn mdui-ripple">双节快乐</a>
+                </div>
+                <div class="post-item">
+                    <span>09-31</span>
+                    <a href="#" class="mdui-btn mdui-ripple">MDUI笔记<2></a>
+                </div>
+                <div class="post-item">
+                    <span>09-27</span>
+                    <a href="#" class="mdui-btn mdui-ripple">MDUI笔记<1></a>
+                </div>
+            </div>
+        </main>
         <footer class="mdui-col-md-12">
-    
+            <div class="footer-inner">
+                <span>&copy;2020 - Now</span>
+                <span class="heartbeat"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                <span>猫七</span>
+                <span>|</span>
+                <span>永远相信美好的事情即将发生</span>
+            </div>
+            <div class="footer-inner mdui-typo">
+                <span>驱动 - <a href="#">NekoBlog</a></span>
+                <span>|</span>
+                <span>主题 - <a href="#">Neko-indigo</a></span>
+            </div>
         </footer>
     </div>
-    
+    <!-- jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <!-- MDUI JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js" integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+" crossorigin="anonymous" ></script>
-    <!-- ionicons -->
-    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script>
+        $(document).ready(function(){
+            var info_top = $(".info").offset().top;
+            $(window).scroll(function(){
+                let top = $(document).scrollTop();
+                let width = $(".info").width();
+                let height = $(".info").height();
+                if(top >= info_top){
+                    $(".info").addClass("fixed");
+                    $(".info").css("width",width);
+                    $(".info").css("height",height);
+                }else{
+                    $(".info").removeClass("fixed");
+                }
+            })
+        })
+    </script>
 </body>
 </html>
