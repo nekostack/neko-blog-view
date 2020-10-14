@@ -350,7 +350,7 @@ header>h1{
 
 /* 排版 */
 .mdui-typo a::before{
-    bottom: 0px!important;
+    bottom: 3px!important;
 }
 .post-content h1,.post-content h2,.post-content h3,.post-content h4{
     border-left: 4px solid #FF5252;
