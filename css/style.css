@@ -79,6 +79,31 @@ header>h1{
 }
 
 
+/* 侧栏tab */
+#box-tab{
+    overflow: hidden;
+}
+.box-tab{
+    width: 4em;
+    min-width: 4em!important;
+    margin: 0 10px;
+}
+
+
+/* 文章目录 */
+.info-dir ul{
+    padding-left: 2em;
+    margin: 0!important;
+}
+.info-dir li{
+    text-align: left;
+    list-style: none;
+}
+.info-dir a:active{
+    color: red;
+}
+
+
 /* 站点信息 */
 .info{
     padding: 30px 10px 10px 10px;
@@ -291,6 +316,7 @@ header>h1{
 }
 .img-box:hover::before{
     transform: scaleX(0)!important;
+    color: #ffffff00!important;
 }
 /* 页尾 */
 footer{
