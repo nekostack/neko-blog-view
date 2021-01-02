@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="mdui-typo post-content">
-                    <h1 id="一级目录1">一级目录1</h1>
+                    <h1 id="一级目录1">前言</h1>
                         <h2 id="二级目录1">二级目录1</h2>
                             <h3 id="三级目录1">三级目录1</h3>
                             <h3 id="三级目录2">三级目录2</h3>
@@ -219,17 +219,17 @@
             var target = $("#contents");
             var content = "<ul>";
             $(".post-content h1").each(function(){
-                content = content + "<li><a href=\"#"+$(this).attr("id")+"\">"+$(this).text()+"</a>";
+                content = content + "<li><a class=\"dir-item\" name=\"#"+$(this).attr("id")+"\">"+$(this).text()+"</a>";
                     var second = $(this).nextUntil("h1","h2");
                     if (second) {
                         content = content +  "<ul>";
                         second.each(function() {
-                            content = content + "<li><a href=\"#"+$(this).attr("id")+"\">"+$(this).text()+"</a>";
+                            content = content + "<li><a class=\"dir-item\" name=\"#"+$(this).attr("id")+"\">"+$(this).text()+"</a>";
                                 var third = $(this).nextUntil("h2","h3");
                                 if (third) {
                                     content = content +  "<ul>";
                                     third.each(function() {
-                                        content = content + "<li><a href=\"#"+$(this).attr("id")+"\">"+$(this).text()+"</a>";
+                                        content = content + "<li><a class=\"dir-item\" name=\"#"+$(this).attr("id")+"\">"+$(this).text()+"</a>";
                                     })
                                     content = content +  "</ul>";
                                 }
@@ -241,7 +241,12 @@
             content = content +  "</ul>";
             $(".info-dir").append(content)
         }
-
+        var dir_id
+        $(".dir-item").click(function(){
+            dir_id=this.attr("name");
+            console.log(dir_id);
+            $("html,body").animate({scrollTop:$(dir_id).offset().top},1000);
+        })
         /* $(".post-content h1").each(function(){
             console.log($(this).text())
         }); */

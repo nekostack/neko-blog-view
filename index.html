@@ -196,8 +196,10 @@
     </script>
     <script>
         $(".gotop").click(function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+            $('body,html').animate({
+          scrollTop: 0
+        },
+        500);
         });
         $(window).scroll(function(){
                 let top = $(document).scrollTop()
